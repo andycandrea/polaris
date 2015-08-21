@@ -17,3 +17,6 @@
 
 config/database.yml
 public/uploads/*
+
+app/views/refills/*
+app/assets/stylesheets/refills/*

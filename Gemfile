@@ -7,7 +7,16 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier'
 
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+gem 'refills'
+
 gem 'turbolinks'
+
+group 'development' do
+  gem 'spring'
+end
 
 group :development, :test do
   gem 'pry'
