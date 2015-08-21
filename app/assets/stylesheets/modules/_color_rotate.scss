@@ -1,0 +1,12 @@
+.color-rotate {
+  @keyframes colorRotate {
+    0%   { color: #ffffff; }
+    25%  { color: #E87978; }
+    50%  { color: #5FAEE3; }
+    75%  { color: #ECEB92; }
+    100% { color: #ffffff; }
+  }
+
+  @include animation(colorRotate 10.0s linear);
+  @include animation-iteration-count(infinite);
+}

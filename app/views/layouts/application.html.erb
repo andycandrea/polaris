@@ -12,35 +12,31 @@
 <body>
   <header class='navigation' role='banner'>
     <div class='navigation-wrapper'>
-      <a href='javascript:void(0)' class='logo'>
+      <a href='/' class='logo'>
         <img src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png' alt='Logo Image'>
       </a>
       <a href='javascript:void(0)' class='navigation-menu-button' id='js-mobile-menu'>MENU</a>
       <nav role='navigation'>
         <ul id='js-navigation-menu' class='navigation-menu show'>
-          <li class='nav-link'><a href='javascript:void(0)'>Products</a></li>
-          <li class='nav-link'><a href='javascript:void(0)'>About Us</a></li>
-          <li class='nav-link'><a href='javascript:void(0)'>Contact</a></li>
+          <li class='nav-link'><a href='https://github.com/andycandrea/polaris'>Github</a></li>
         </ul>
       </nav>
       <div class='navigation-tools'>
-        <a href='javascript:void(0)' class='sign-up'>Sign Up</a>
+        <% if current_user.present? %>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'sign-up' %>
+        <% else %>
+          <%= link_to 'Sign In', new_user_session_path, class: 'sign-up' %>
+        <% end %>
       </div>
     </div>
   </header>
 
   <main class='type-system-sans'>
+    <% flash.each do |key, value| %>
+      <div class="flash-<%= key %>"><%= value %></div>
+    <% end %>
+
     <%= yield %>
   </main>
-
-  <footer class='footer-2' role='contentinfo'>
-    <div class='footer-logo'>
-      <img src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png' alt='Logo image'>
-    </div>
-    <ul>
-      <li><a href='https://github.com/andycandrea/polaris'>Github</a></li>
-      <li><a href='http://apod.nasa.gov/apod/'>APOD</a></li>
-    </ul>
-  </footer>
 </body>
 </html>
