@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
 
   validates :email, :encrypted_password, presence: true
   validates :email, uniqueness: true
+
+  has_many :image_sets
 end
