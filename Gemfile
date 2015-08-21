@@ -12,6 +12,8 @@ gem 'neat'
 gem 'bitters'
 gem 'refills'
 
+gem 'devise'
+
 gem 'turbolinks'
 
 group 'development' do
