@@ -1,0 +1,33 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: polaris_development
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASS'] %>
+  host: <%= ENV['APP_HOST'] %>
+  port: <%= ENV['APP_PORT'] %>
+  schema_search_path: public,frange,genetic_code,so
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: polaris_test
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASS'] %>
+  host: <%= ENV['APP_HOST'] %>
+  port: <%= ENV['APP_PORT'] %>
+  schema_search_path: public,frange,genetic_code,so
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: polaris_production
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASS'] %>
+  host: <%= ENV['APP_HOST'] %>
+  port: <%= ENV['APP_PORT'] %>
+  schema_search_path: public,frange,genetic_code,so
+

@@ -1,0 +1,35 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - '**/bin/**/*'
+    - '**/config/**/*'
+    - '**/db/**/*'
+    - '**/script/**/*'
+    - '**/spec/rails_helper.rb'
+    - '**/spec/spec_helper.rb'
+    - '**/Gemfile'
+    - '**/Rakefile'
+  DisplayCopNames: true
+  RunRailsCops: true
+
+Metrics/LineLength:
+  Exclude:
+    - 'spec/**/*'
+  Max: 80
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/**/*'
+
+Style/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+Style/CollectionMethods:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+Style/SingleSpaceBeforeFirstArg:
+  Exclude:
+    - 'spec/factories/**'
