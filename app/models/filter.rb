@@ -1,5 +1,5 @@
-class Band < ActiveRecord::Base
-  validates :name, :frequency, presence: true
+class Filter < ActiveRecord::Base
+  validates :name, presence: true
   validates :name, uniqueness: true
 
   has_many :images
