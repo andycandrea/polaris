@@ -11,6 +11,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'refills'
+gem 'slim'
 
 gem 'devise'
 
