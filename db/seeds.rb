@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+if Filter.all.none?
+  puts 'Seeding Filters'
+  Filter.create!(name: 'Blue')
+  Filter.create!(name: 'Red')
+  Filter.create!(name: 'Green')
+end
