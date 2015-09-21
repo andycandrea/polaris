@@ -14,6 +14,8 @@ gem 'refills'
 gem 'slim'
 
 gem 'devise'
+gem 'carrierwave'
+gem 'font-awesome-rails'
 
 gem 'turbolinks'
 
