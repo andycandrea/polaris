@@ -2,7 +2,10 @@
 @import 'modules/base/base';
 @import 'neat';
 
+@import 'font-awesome';
+
 @import 'base/base';
+@import 'layout/grid';
 
 @import 'modules/refills/type-system-sans';
 @import 'modules/refills/navigation';
@@ -11,3 +14,4 @@
 @import 'modules/refills/textures';
 
 @import 'modules/color_rotate';
+@import 'modules/images';

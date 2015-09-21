@@ -1,0 +1,18 @@
+.image {
+  text-align: center;
+}
+
+.image-attribute {
+}
+
+.image-attribute-label {
+  font-weight: bold;
+}
+
+.imaged-on {
+  @extend .small-column-right;
+}
+
+.image-title {
+  @extend .large-column-left;
+}

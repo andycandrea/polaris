@@ -1,0 +1,20 @@
+.half-column {
+  @include span-columns(6);
+  @include omega(2n);
+}
+
+.large-column-left {
+  @include span-columns(8);
+  @include omega();
+
+  float: left;
+  text-align: left;
+}
+
+.small-column-right {
+  @include span-columns(4);
+  @include omega();
+
+  float: right;
+  text-align: right;
+}
