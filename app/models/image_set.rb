@@ -3,5 +3,7 @@ class ImageSet < ActiveRecord::Base
 
   belongs_to :user
 
-  has_many :images
+  has_many :images, inverse_of: :image_set
+
+  accepts_nested_attributes_for :images
 end

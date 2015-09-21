@@ -1,0 +1,17 @@
+= form_for image_set do |f|
+  = f.label :name
+  = f.text_field :name
+
+  = f.label :imaged_on, 'Observation Date'
+  = f.date_field :imaged_on
+
+  = f.fields_for :images do |image_form|
+    div.half-column
+      = image_form.label :file
+      = image_form.file_field :file
+
+    div.half-column
+      = image_form.label :filter_id, 'Filter'
+      = image_form.select :filter_id, options_from_collection_for_select(Filter.all, :id, :name, image_form.object.filter_id)
+
+  = f.submit 'Save'

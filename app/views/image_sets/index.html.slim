@@ -1,0 +1,17 @@
+div.container
+  h1 Your Image Sets
+  div = link_to fa_icon_string('plus-circle', 'Add New Image Set'), new_image_set_path
+
+  - if @image_sets.any?
+    - @image_sets.each_with_index do |image_set, index|
+      h2.image-title = image_set.name || "Image Set ##{index + 1}"
+      div.imaged-on = l image_set.imaged_on
+
+      - image_set.images.each do |image|
+        div.image
+          = image_tag image.file
+          div
+            span.image-attribute-label> Filter:
+            span.image-attribute = image.filter
+  - else
+    div No Image Sets uploaded yet!

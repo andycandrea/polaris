@@ -5,8 +5,6 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'
-    link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'
 
   body
     header class='navigation' role='banner'
@@ -19,6 +17,8 @@ html
           ul#js-navigation-menu.navigation-menu.show
             li.nav-link
               a href='https://github.com/andycandrea/polaris' Github
+            li.nav-link
+              = link_to 'Image Sets', image_sets_path
         div.navigation-tools
           - if current_user.present?
             = link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'sign-up'
