@@ -4,9 +4,10 @@ div.container
 
   - if @image_sets.any?
     - @image_sets.each_with_index do |image_set, index|
+      = link_to 'Create Color Image', color_images_path(image_set_id: image_set.id), method: :post
+
       h2.image-title = image_set.name || "Image Set ##{index + 1}"
       div.imaged-on = l image_set.imaged_on
-
       - image_set.images.each do |image|
         div.image
           = image_tag image.file

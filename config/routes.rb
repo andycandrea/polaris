@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :image_sets
+  resources :color_images
 end
