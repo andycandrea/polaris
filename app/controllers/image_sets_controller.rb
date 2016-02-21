@@ -1,5 +1,6 @@
 class ImageSetsController < ApplicationController
   def index
+    return redirect_to :root if current_user.blank?
     @image_sets = current_user.image_sets.order(:created_at)
   end
 
