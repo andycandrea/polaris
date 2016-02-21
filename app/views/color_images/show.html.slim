@@ -1,9 +1,8 @@
 div.container
-  h1 Your Image Sets
-  div = link_to fa_icon_string('plus-circle', 'Add New Image Set'), new_image_set_path
+  h1 Color Image #{@color_image.id}
 
-  h2.image-title = @color_image.image_set.name
-  div.imaged-on = l @color_image.image_set.imaged_on
+  h2.image-title = @color_image.name
+  div.imaged-on = l @color_image.imaged_on
 
   div.image
     = image_tag @color_image.file
