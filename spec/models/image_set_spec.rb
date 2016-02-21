@@ -10,4 +10,8 @@ RSpec.describe ImageSet do
     it { is_expected.to have_many :images }
     it { is_expected.to have_many :color_images }
   end
+
+  describe 'nested attributes' do
+    it { is_expected.to accept_nested_attributes_for :images }
+  end
 end
