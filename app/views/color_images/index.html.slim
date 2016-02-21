@@ -1,0 +1,12 @@
+div.container
+  h1 Your Color Images
+
+  - if @color_images.any?
+    - @color_images.each_with_index do |color_image, index|
+      h2.image-title = color_image.name || "Image Set ##{index + 1}"
+      div.imaged-on = l color_image.imaged_on
+
+      div.image
+        = image_tag color_image.file
+  - else
+    div No Color Images created yet!

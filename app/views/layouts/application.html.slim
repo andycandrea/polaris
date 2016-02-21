@@ -19,6 +19,8 @@ html
               a href='https://github.com/andycandrea/polaris' Github
             li.nav-link
               = link_to 'Image Sets', image_sets_path
+            li.nav-link
+              = link_to 'Color Images', color_images_path
         div.navigation-tools
           - if current_user.present?
             = link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'sign-up'

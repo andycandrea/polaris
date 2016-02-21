@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   has_many :image_sets
+  has_many :color_images, through: :image_sets
 end

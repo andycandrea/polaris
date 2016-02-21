@@ -1,4 +1,9 @@
 class ColorImagesController < ApplicationController
+  def index
+    return redirect_to :root if current_user.blank?
+    @color_images = current_user.color_images.order(:created_at)
+  end
+
   def show
     @color_image = ColorImage.find(params[:id])
   end
